@@ -33,3 +33,10 @@ void todoMinus(char * temp) // Recibe un string y lo pasa _todo_ a minuscula.
 
 
 -------------------------------------------------------------------------------------------------------------------------------
+
+void mayusPrimera (char * temp)  //Pasa a mayuscula el primer caracter del string
+{
+    char *s = temp;
+    *s = toupper((unsigned char) *s);
+}
+
