@@ -40,3 +40,15 @@ void mayusPrimera (char * temp)  //Pasa a mayuscula el primer caracter del strin
     char *s = temp;
     *s = toupper((unsigned char) *s);
 }
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+void sacarEnter(char vec[]) // borra el enter que queda en la ultima posicion del string cuando se usa fgets().
+{
+    int cant;
+    cant = strlen(vec);
+    vec[cant-1] = '\0';
+}
+
