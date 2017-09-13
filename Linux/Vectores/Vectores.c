@@ -3,8 +3,7 @@
 /**brief Ordena un vector de menor a mayor
 /*param recibe el puntero de un vector
 /*param  recibe un int con  la longitud del vector.
-
-
+*/
 void ordenarVecMenor (int vector[], int leng)
 {
     int i, j;
@@ -29,7 +28,7 @@ void ordenarVecMenor (int vector[], int leng)
 /**brief Ordena un vector de mayor a menor
 /*param recibe el puntero de un vector
 /*param  recibe un int con  la longitud del vector.
-
+*/
 void ordenarVecMayor (int vector[], int leng)
 {
     int i, j;
@@ -55,7 +54,7 @@ void ordenarVecMayor (int vector[], int leng)
 /*recibe la longitud del vector.
 /* return devuelve un int
 /**
-
+*/
 int buscarMayor (int vector[], int leng)
 {
     int mayor = vector[0];
@@ -76,7 +75,7 @@ int buscarMayor (int vector[], int leng)
 /*param recibe un vector
 /*recibe  la longitud del vector
 /*devuelve un int 
-
+*/
 int buscarMenor (int vector[], int leng)
 {
     int menor = vector[0];
@@ -98,7 +97,7 @@ int buscarMenor (int vector[], int leng)
 /*param recibe la longitud del vector
 /*param recibe el numero a buscar
 /*return devuelve un char 'n' si el numero no se encuentra en el vector, y un char 's' en caso contrario.
-
+*/
 
 char buscarNumero (int vector[], int leng, int numero)
 {
