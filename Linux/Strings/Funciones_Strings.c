@@ -2,11 +2,6 @@
 *Incluir siempre las librerias:  <string.h>  y  <ctype.h>
 
 
-
-
-
-
-
 void todoMayus(char * temp) // Recibe un string y lo pasa _todo_ a mayuscula.
 {
   char *s = temp;
@@ -71,4 +66,29 @@ void ordenarStrings(char nombre[][50], int filas) // ordena matrizes de strings 
         }
         strcpy(nombre[j+1], temporal);
     }
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+int validaString (char cadena[]) //Recibe una cadena, y valida que no se hayan ingresado otra cosa que no sean letras. 
+{                                // Devuelve un 0 si la cadena no fue validada, un -1 si es una cadena valida.
+    char letra;
+    int respuesta, len;
+    letra = cadena[0];
+    len = strlen(cadena);
+    for (int i = 0; i < len; i++)
+    {
+        letra = cadena[i];
+        if (!isalpha(letra))
+        {
+            respuesta = 0;
+            break;
+        }else
+            {
+                respuesta = -1;
+            }
+    }
+
+    return respuesta;
 }
