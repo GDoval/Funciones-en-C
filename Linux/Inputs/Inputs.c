@@ -47,4 +47,42 @@ int validaInt (float input,char eMessage[], float lowLimit, float hiLimit)
 
 ------------------------------------------------------------------------------------
 
+/**
+/*Cascara de Switch para usar como menu en parciales or whatever dude. I don't even care
+
+
+*/
+char res ='s';+
+int opcion;
+while (res == 's')
+    {
+        printf("1) ");
+        printf("\n2) ");
+        printf("\n3) ");
+        printf("\n4) ");
+        printf("\n5) ");
+        printf("\n6) Salir\n");
+        scanf("%d", &opcion);
+        switch (opcion)
+        {
+            case 1:
+                
+                break;
+
+            case 2:
+                break;
+
+            case 3:
+                break;
+
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                res = 'n';
+                break;
+        }
+
+    }
 
