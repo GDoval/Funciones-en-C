@@ -48,7 +48,7 @@ int validaInt (float input,char eMessage[], float lowLimit, float hiLimit)
 ------------------------------------------------------------------------------------
 
 /**
-/*Cascara de Switch para usar como menu en parciales or whatever dude. I don't even care
+/*Cascara de Switch para usar como menu en parciales or whatever dude. I don't give a shit
 
 
 */
