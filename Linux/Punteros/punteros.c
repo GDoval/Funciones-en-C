@@ -35,4 +35,36 @@ habria, pues, de usar punteros cuando usamos arrays?
 
 
 
+/*Punteros con estructuras*/
+
+typedef struct { // Una estructura
+	int edad;
+	char nombre[50];
+}ePersonita;
+
+ePersonita alguno = {15, "Juan Domingo"}; // variable de tipo estructura hardcodeada
+ePersonita* p; // puntero de tipo estructura
+p = &alguno; // le pasamos la direccion de memoria de la variable
+printf("%s", p->nombre); // te imprime el nombre te imprime. El operador flecha torna obsoleto el uso del operador de indireccion ('*')
+
+printf("Ingresate un nombre, dale: ");
+setbuf(stdin, NULL); // se limpia el bendito buffer
+fgets(p->nombre, 20, stdin); // asi se lee un array de tipo estructura. De nuevo, el operador flecha reemplaza al '*'
+printf("\nNOMBRE: %s     EDAD: %d", p->nombre, p->edad); // aca se imprimen los dos campos de la estructura.
+
+
+ePersonita algunos[] = {{15, "Romulo"}, {15, "Remo"}, {65, "Augustus Porongus"}}; // vector de estructuras hardcodeado
+ePersonita* k; // puntero del tipo estructura
+k = &algunos // guardamos la direccion de memoria del _primer_ elemento del array. O sea, 'algunos[0]'
+for (int i = 0; i < 3; i++)
+    {
+        printf("\n\nNOMBRE: %s", (k+i)->nombre);
+        printf("\n\nEDAD: %d", (k+i)->edad);
+    }
+/*Asi se imprimen los elementos de un array del tipo estructura. De nuevo, si reemplazamos la variable puntero por la variable de 
+tipo array se obtiene el mismo resultado.
+
+
+
+
 
