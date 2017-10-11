@@ -62,7 +62,54 @@ for (int i = 0; i < 3; i++)
         printf("\n\nEDAD: %d", (k+i)->edad);
     }
 /*Asi se imprimen los elementos de un array del tipo estructura. De nuevo, si reemplazamos la variable puntero por la variable de 
-tipo array se obtiene el mismo resultado.
+tipo array se obtiene el mismo resultado.*/
+
+int acum = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        acum = acum + (k+i)->edad; // Acumulamos el valor que esta en el campo 'edad' de la estructura ePersonita.
+    }
+    printf("Acum: %d", acum); // se imprime acum
+
+
+for (int i = 0; i < 3; i++)
+{
+	printf("Ingresame la edad, dale: ");
+	scanf("%d", &(*k+i)->edad);
+	printf("\nIngresame el nombre, dale que podes: ");
+	setbuf(stdin, NULL);
+	fgets((k+i)->nombre, 50, stdin);  // Habría que sacar el '\0' pero viste como es esto.
+}
+for (int i = 0; i < 3; i++)
+{
+	printf("NOMBRE: %s", (k+i)->nombre);
+	printf("\nEDAD: %d\n", (k+i)->edad);
+}
+
+/* Asi se toman los datos y se los inserta dentro de una estructura, el más complicado sería el scanf() de todo lo que no sea string,
+pero el resto es bastante sencillo*/
+
+
+/*Puntero de estructuras dentro de funciones*/
+
+ingresoPersonita(k, 3); // esto en el MAIN, y donde 'k' es el puntero que apunta al primer elemento del array de estructuras.
+
+void ingresoPersonita (ePersonita* lista, int tam)
+{
+    for (int i = 0; i < tam; i++)
+    {
+	printf("Ingresame la edad, dale: ");
+	scanf("%d", &(lista+i)->edad);
+	printf("\nIngresame el nombre, dale que podes: ");
+	setbuf(stdin, NULL);
+	fgets((lista+i)->nombre, 50, stdin);
+    }
+}
+
+/* Así como está funciona igual que cuando se ponía el FOR adentro del MAIN. En el llamado a la función pueden ir dos cosas: o el 
+puntero que guarda la dirección de memoria del array de estructuras, o el '&' seguido del nombre del array de estructuras. Mismo
+resultado de las dos maneras, siempre que la función reciba un puntero del tipo estructura.*/
+
 
 
 
