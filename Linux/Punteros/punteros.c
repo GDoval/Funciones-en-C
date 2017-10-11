@@ -1,6 +1,8 @@
 /*  Cosas básicas para tener en cuenta cuando manejamos punteros. 
 Habría que ir revisando cada tanto, por las dudas vistes*/
 
+/*Abrir con el SublimeText para más glamour*/
+
 
 /* Imprimir usando printf() */
 
@@ -72,7 +74,7 @@ int acum = 0;
     printf("Acum: %d", acum); // se imprime acum
 
 
-for (int i = 0; i < 3; i++)
+for (int i = 0; i < 3; i++) // FOR para ingresar valores al array sin hardcodear.
 {
 	printf("Ingresame la edad, dale: ");
 	scanf("%d", &(*k+i)->edad);
